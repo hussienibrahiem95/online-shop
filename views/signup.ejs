@@ -1,0 +1,61 @@
+<%- include('parts/header') %>
+    <%- include('parts/navbar') %>
+        <br>
+        <div class="container text-center">
+            <h3>Create Account</h3>
+            <form action="/signup" method="POST">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+                <% let Error1 = validationErrors.find( err => err.param =='username')%>
+                    <% if(Error1) {%>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Oops! Error</strong>
+                            <%= Error1.msg %>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <% }%>
+                            <br>
+                            <input type="email" class="form-control" name="email" placeholder="E-mail"> <br>
+                            <% let Error2 = validationErrors.find( err => err.param =='email')%>
+                                <% if(Error2) {%>
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>Oops! Error</strong>
+                                        <%= Error2.msg %>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    <% }%>
+                                        <input type="password" class="form-control" name="password" placeholder="Password"> <br>
+                                        <% let Error3 = validationErrors.find( err => err.param =='password')%>
+                                            <% if(Error3) {%>
+                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                    <strong>Oops! Error</strong>
+                                                    <%= Error3.msg %>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <% }%>
+                                                    <input type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm Password">
+                                                    <% let Error4= validationErrors.find( err => err.param =='ConfirmPassword')%>
+                                                        <% if(Error4) {%>
+                                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                <strong>Oops! Error</strong>
+                                                                <%= Error4.msg %>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                            </div>
+                                                            <% }%>
+                                                                <br>
+
+                                                                <input type="submit" class="btn btn-primary" value="Create Account">
+            </form>
+            <% if(authError) {%> 
+                <br>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Oops! Error</strong>
+                    <%= authError %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+                    <br>
+                    <div>
+                        Already have account ? <a href="/login">Login</a>
+                    </div>
+        </div>
+        <%- include('parts/footer') %>

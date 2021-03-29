@@ -1,0 +1,70 @@
+<%- include('parts/header') %>
+    <%- include('parts/navbar') %>
+        <div class="container">
+            <br>
+            <% if(items.length == 0) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Oops!</strong> No items on your Cart
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } else {%>
+
+                    <% if(validationsError) {%>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Oops Error!</strong>
+                            <%= validationsError.msg %>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <% } %>
+                            <table class="table table-light table-striped table-hover table-bordered table-responsive">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col" style="width:20%"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(let i = 0 ;i<items.length;i++){ %>
+                                        <tr>
+                                            <th scope="row">
+                                                <%= i+1 %>
+                                            </th>
+                                            <td>
+                                                <%= items[i].name %>
+                                            </td>
+                                            <td>
+                                                <%= items[i].price %>
+                                            </td>
+
+                                            <form method="POST">
+                                                <td>
+                                                    <input type="number" name="amount" value="<%= items[i].amount %>">
+                                                </td>
+                                                <td>
+                                                    <%= items[i].amount * items[i].price %>$
+                                                </td>
+                                                <input type="hidden" name="cardId" value="<%= items[i]._id %>">
+                                                <td>
+                                                    <input type="submit" class="btn btn-success" value="Save" formaction="/cart/save">
+                                                    <input type="submit" class="btn btn-danger" value="Delete" formaction="/cart/delete">
+                                                    <input type="submit" class="btn btn-success" value="Order" formaction="/cart/verifyorder">
+                                                </td>
+                                            </form>
+                                        </tr>
+
+                                        <% } %>
+
+                                </tbody>
+                            </table>
+                            <form method="POST">
+                                <input type="hidden" name="cardId" value="delete_all">
+                                <input type="submit" class="btn btn-danger" value="Delete All" formaction="/cart/delete">
+                            </form>
+
+                            <% } %>
+        </div>
+        <%- include('parts/footer') %>
