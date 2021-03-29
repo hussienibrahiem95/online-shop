@@ -1,0 +1,66 @@
+<%- include('parts/header') %>
+    <%- include('parts/navbar') %>
+
+        <div class="container">
+            <h1></h1>
+            <div class="d-flex align-items-center p-3 my-3 bg-purple rounded shadow-sm">
+                <div class="lh-1">
+                    <h1 class="h6 mb-0 lh-1">Welcome ,
+                        <span style="color:brown;"> <%= username %> </span>
+                    </h1>
+                </div>
+            </div>
+            <form action="/" method="GET">
+                <select name='category' class="form-control">
+                    <option value="all" <%= dicSelected['all'] %> >All</option>
+                    <option value="clothes" <%= dicSelected['clothes'] %> >Clothes</option>
+                    <option value="phones"<%= dicSelected['phones'] %> >Phones</option>
+                    <option value="computers" <%= dicSelected['computers'] %> >Computers</option>
+                </select>
+                <input type="submit" class="btn btn-primary" value="Filter">
+            </form>
+
+            <% if(validationsError) {%>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Oops Error!</strong>
+                    <%= validationsError.msg %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+
+                    <% if(products.length == 0) {%>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Oops!</strong> No Products Found
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <% } %>
+                            <div class="row">
+                                <% for (let product of products) {%>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="card" style="width: 18rem;">
+                                            <img src="/<%= product.image %>" class="card-img-top" style="width: 15rem; height: 15rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="/product/<%= product._id %>">
+                                                        <%= product.name %>
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text"> Price :
+                                                    <%= product.price %> $ </p>
+                                                <form action="/cart" method="POST" class="add-to-cart-form">
+                                                    <input type="number" name="amount" value="1" class="form-control">
+                                                    <p></p>
+                                                    <input type="hidden" name="name" value="<%= product.name %>">
+                                                    <input type="hidden" name="price" value="<%= product.price %>">
+                                                    <input type="hidden" name="productId" value="<%= product._id %>">
+                                                    <input type="hidden" name="redirectTo" value="/">
+                                                    <input type="submit" value="Add to Cart" class="btn btn-primary">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% }%>
+                            </div>
+
+        </div>
+        <%- include('parts/footer') %>

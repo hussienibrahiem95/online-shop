@@ -1,0 +1,70 @@
+<%- include('parts/header') %>
+    <%- include('parts/navbar') %>
+        <div class="container">
+
+            <br>
+            <% if(items.length == 0) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Oops!</strong> No items on your Orders
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } else {%>
+                    <table class="table table-light table-striped table-hover table-bordered table-responsive">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col">address</th>
+                                <th scope="col">status</th>
+                                <th scope="col">time</th>
+                                <th scope="col" style="width:10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i = 0 ;i<items.length;i++){ %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= i+1 %>
+                                    </th>
+                                    <td>
+                                        <%= items[i].prod_name %>
+                                    </td>
+                                    <td>
+                                        <%= items[i].amount %>
+                                    </td>
+                                    <td>
+                                        <%= items[i].amount * items[i].price %>$
+                                    </td>
+
+                                    <td>
+                                        <%= items[i].address %>
+                                    </td>
+
+                                    <td>
+                                        <%= items[i].status %>
+                                    </td>
+
+                                    <td>
+                                        <%= items[i].final_date %>
+                                    </td>
+                                    <form method="POST">
+                                        <input type="hidden" name="orderId" value="<%= items[i]._id %>">
+                                        <td>
+                                            <input type="submit" class="btn btn-danger" value="Cancel" formaction="/orders/cancel">
+                                        </td>
+                                    </form>
+                                </tr>
+                                <% } %>
+
+                        </tbody>
+                    </table>
+                    <form method="POST">
+                        <input type="hidden" name="orderId" value="delete_all">
+                        <input type="submit" class="btn btn-danger" value="Cancel All" formaction="/orders/cancel">
+                    </form>
+
+                    <% } %>
+        </div>
+        <%- include('parts/footer') %>
