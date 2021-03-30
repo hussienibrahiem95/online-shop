@@ -6,13 +6,18 @@ and it allows Admin to Add Products and View Orders and change its status
 
 ## System functions overview:
 
-Sign UP
-Login
-View Products
-Search products By Cateogry
-Add new product
-Add Products To Cart
-Remove Products From Cart
+* Sign UP
+* Login
+* View Products
+* Search products By Cateogry
+* Add Products To Cart
+* Remove Products From Cart
+* Add new Product for Admins Only
+* View All Orders for Admins Only
+* Change Order Status 
+* Search Orders By Email or its status for Admins Only
+
+
 
 ## Frontend technologies:
 
