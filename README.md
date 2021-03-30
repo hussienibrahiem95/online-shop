@@ -3,6 +3,7 @@
 Online-Shop An e-commerce wep app which allows customers to register,login and view products and  buys products by add items to their shopping cart,
 and it allows Admin to Add Products and View Orders and change its status  
 
+Hosted on glitch services and Database on Mongodb Cloud : Link  
 
 ## System functions overview:
 
