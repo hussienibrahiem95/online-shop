@@ -1,7 +1,7 @@
 <%- include('parts/header') %>
     <%- include('parts/navbar') %>
         <br>
-        <div class="container text-center">
+        <div class="container text-center" style="width: 30%; margin: 25px auto;">
             <h3>Create Account</h3>
             <form action="/signup" method="POST">
                 <input type="text" class="form-control" name="username" placeholder="Username">
@@ -43,9 +43,9 @@
                                                             <% }%>
                                                                 <br>
 
-                                                                <input type="submit" class="btn btn-primary" value="Create Account">
+                                                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Create Account">
             </form>
-            <% if(authError) {%> 
+            <% if(authError) {%>
                 <br>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Oops! Error</strong>

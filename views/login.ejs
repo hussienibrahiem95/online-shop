@@ -1,8 +1,8 @@
 <%- include('parts/header') %>
     <%- include('parts/navbar') %>
         <br>
-        <div class="container text-center">
-            <h3>Login</h3>
+        <div class="container text-center" style="width: 30%; margin: 25px auto;">
+            <h3 style="text-align: center;">Login</h3>
             <form action="/login" method="POST">
                 <input type="email" class="form-control" name="email" placeholder="E-mail"> <br>
                 <% let Error1 = validationErrors.find( err => err.param =='email')%>
@@ -22,7 +22,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                                     <% }%>
-                                        <input type="submit" class="btn btn-primary" value="Login">
+                                        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Login">
             </form>
             <% if(loginError) {%>
                 <br>
