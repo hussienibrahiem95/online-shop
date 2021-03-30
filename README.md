@@ -36,3 +36,14 @@ Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://placid-g
 * NPM
 
 ## Here's some screenshots from the app:
+
+#Login
+
+![login](https://user-images.githubusercontent.com/15314292/112927617-954b1a80-9115-11eb-926b-df703fa5fdcb.jpeg)
+
+
+# Sign UP
+![sign up](https://user-images.githubusercontent.com/15314292/112927792-d7745c00-9115-11eb-871a-e540027f2656.jpeg)
+
+
+
