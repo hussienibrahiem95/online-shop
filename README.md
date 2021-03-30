@@ -4,7 +4,7 @@ online-shop An e-commerce system which allows customers to register,login and vi
 and it allows Admin to Add Products and View Orders and change its status  
 
 
-System functions overview:
+## System functions overview:
 
 Sign UP
 Login
@@ -13,3 +13,18 @@ Search products By Cateogry
 Add new product
 Add Products To Cart
 Remove Products From Cart
+
+## Frontend technologies:
+
+* HTML
+* CSS
+* JavaScript
+* Jquery
+* Bootstrap
+
+## Backend technologies:
+
+* NodeJS
+* Express
+* MongoDB & moongose
+* NPM
