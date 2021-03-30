@@ -1,6 +1,6 @@
-# online-shop E-commerce System
+# Online-Shop E-commerce System
 
-online-shop An e-commerce system which allows customers to register,login and view products and  buys products by add items to their shopping cart,
+Online-Shop An e-commerce wep app which allows customers to register,login and view products and  buys products by add items to their shopping cart,
 and it allows Admin to Add Products and View Orders and change its status  
 
 
