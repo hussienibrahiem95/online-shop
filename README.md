@@ -1,7 +1,6 @@
 # Online-Shop E-commerce Web App
 
-Online-Shop An e-commerce wep app which allows customers to register,login and view products and  buys products by add items to their shopping cart,
-and it allows Admin to Add Products and View Orders and change its status.
+Online-Shop An E-commerce web app which allows customers to register, login , view products and buy products by adding items to their shopping cart, and it allows Admin to Add Products ,View all Orders and change its status .
 
 Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://stormy-frost-composer.glitch.me/)
 
@@ -48,7 +47,7 @@ Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://stormy-f
 # Home As Guest
 ![home guest](https://user-images.githubusercontent.com/15314292/112927895-01c61980-9116-11eb-8a50-313446e46318.png)
 
-# Home User
+# Home As a User
 ![home](https://user-images.githubusercontent.com/15314292/112927861-f4a92a80-9115-11eb-8f04-0e9d8bba2932.png)
 
 # User Cart
