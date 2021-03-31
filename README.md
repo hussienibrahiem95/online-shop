@@ -9,7 +9,7 @@ Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://stormy-f
 * Sign UP
 * Login
 * View Products
-* Search products By Cateogry
+* Filter products By Cateogry
 * Add Products To Cart
 * Remove Products From Cart
 * Add new Product for Admins Only
