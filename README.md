@@ -45,10 +45,13 @@ Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://stormy-f
 ![sign up](https://user-images.githubusercontent.com/15314292/112927792-d7745c00-9115-11eb-871a-e540027f2656.jpeg)
 
 # Home As Guest
+![home](https://user-images.githubusercontent.com/15314292/112927861-f4a92a80-9115-11eb-8f04-0e9d8bba2932.png)
+
 ![home guest](https://user-images.githubusercontent.com/15314292/112927895-01c61980-9116-11eb-8a50-313446e46318.png)
 
 # Home As a User
-![home](https://user-images.githubusercontent.com/15314292/112927861-f4a92a80-9115-11eb-8f04-0e9d8bba2932.png)
+![home guest](https://user-images.githubusercontent.com/15314292/113084025-86c83600-91dd-11eb-9171-d733d0df8f2d.png)
+
 
 # User Cart
 ![cart](https://user-images.githubusercontent.com/15314292/112927942-160a1680-9116-11eb-81bd-8914ae39cb67.png)
