@@ -14,7 +14,7 @@ Hosted on glitch and Database on Mongodb Cloud : [WebSite Link](https://stormy-f
 * Remove Products From Cart
 * Add new Product for Admins Only
 * View All Orders for Admins Only
-* Change Order Status 
+* Change Order Status for Admins Only 
 * Search Orders By Email or its status for Admins Only
 
 
